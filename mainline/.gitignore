@@ -1,0 +1,12 @@
+*.iml
+.idea/
+.aws-sam/
+packaged.yaml
+build
+dist/
+node_modules/
+.DS_Store
+output
+*.csv
+*.zip
+package-lock.json
