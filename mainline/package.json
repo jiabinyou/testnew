@@ -1,0 +1,54 @@
+{
+  "name": "@amzn/chime-doc-share-test",
+  "version": "1.0.0",
+  "license": "MIT",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "bootstrap": "brazil-bootstrap --environmentType test-runtime",
+    "test": "jest",
+    "build": "tsc",
+    "tsc": "tsc",
+    "clean": "rm -rf build/* build node_modules/ dist/",
+    "release": "npm run build"
+  },
+  "dependencies": {
+    "@amzn/hydra-test-platform-jest": "*",
+    "@types/jest": "^26.0.9",
+    "@types/minimist": "^1.2.1",
+    "aws-sdk": "^2.706.0",
+    "install": "^0.13.0",
+    "jest": "^26.0.9",
+    "lodash": "^4.17.11",
+    "logger": "*",
+    "minimist": "^1.2.5",
+    "node-fetch": "^2.6.1",
+    "npm": "*",
+    "request": "^2.88.2",
+    "uuidv4": "^6.2.3",
+    "ws": "^7.3.1",
+    "aws4": "^1.11.0",
+    "@types/aws4": "^1.11.2"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.2",
+    "@types/node": "^14.14.22",
+    "@types/node-fetch": "^2.6.1",
+    "@types/prompts": "^2.0.9",
+    "@types/ws": "^7.2.6",
+    "@types/yargs": "^16.0.0",
+    "lodash": "^4.17.21",
+    "prettier": "2.1.2",
+    "prompts": "^2.4.0",
+    "ts-jest": "^26.1.4",
+    "typescript": "^4.9.3",
+    "yargs": "^16.2.0"
+  },
+  "npm-pretty-much": {
+    "runRelease": "release",
+    "runTest": "never",
+    "publishLibCommonJs": true,
+    "consumeLibCommonJs": false
+  }
+}
