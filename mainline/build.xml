@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<project xmlns:ht="happytrails" name="ChimeDocShareLambdaTests-1.0" basedir="." default="release">
+
+    <property name="configuration.dir" location="${basedir}/configuration" />
+    <property name="ht.include.cfg" value="true" />
+    <property name="checkstyle.failOnError" value="false" />
+    <property name="integration.tests.dir" location="${basedir}/src" />
+
+    <import file="${happytrails.root}/happytrails.xml" optional="false"/>
+    <ht:import file="happier-trails.xml" optional="false"/>
+
+    <fileset id="integration.test.sources" dir="${integration.tests.dir}">
+        <include name="**/*Test.java" />
+    </fileset>
+
+    <target name="set-alpha">
+        <property name="tests.additional.jvmargs" value="-DAWS_REGION=us-west-2" />
+    </target>
+
+    <target name="alpha-integ-tests" depends="set-alpha,test-integration-assert" />
+</project>
