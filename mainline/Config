@@ -1,0 +1,49 @@
+# -*-perl-*-
+
+package.ChimeDocShareLambdaTests = {
+    interfaces = (1.0);
+
+    build-system = npm-pretty-much-and-cfn-build;
+    build-tools = {
+        1.0 = {
+            NpmPrettyMuch = 1.0;
+            NodeJS = 14.x;
+            CfnBuild = 1.0;
+        };
+    };
+
+    dependencies = {
+        1.0 = {
+            Jackson-databind = 2.10.x;
+            Jackson-dataformat-cbor = 2.10.x;
+            Jackson-dataformat-xml = 2.12.x;
+            Jackson-dataformat-yaml = 2.12.x;
+            Jackson-module-jaxb-annotations = 2.12.x;
+            HydraTestPlatformNodeJSJestLib = 1.0;
+            NodeJS-puppeteer = 1.17.x;
+        };
+    };
+
+    runtime-dependencies = {
+        1.0 = {
+            HydraTestPlatformNodeBaseLib = 1.0;
+            NodeJS = 14.x;
+        };
+    };
+
+    remove-dependencies = {
+        1.0 = {
+            Jackson-databind = 2.8.x;
+            Jackson-dataformat-cbor = 2.8.x;
+        };
+    };
+
+    resolves-conflict-dependencies = {
+        1.0 = {
+            Jackson-dataformat-xml = 2.12.x;
+            Jackson-dataformat-yaml = 2.12.x;
+            Jackson-module-jaxb-annotations = 2.12.x;
+            NodeJS = 14.x;
+        };
+    };
+};
