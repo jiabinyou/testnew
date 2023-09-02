@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "lib": ["es2019", "dom"],
+    "rootDirs": ["./test", "./bin"],
+    "outDir": "./build/lib/commonjs/@amzn/chime-doc-share-test",
+    "module": "commonjs",
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "target": "es2019",
+    "strict": true,
+    "pretty": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "esModuleInterop": true,
+    "paths": {"logger": ["@amzn/logger/src/index.js"]},
+    "baseUrl": "./"
+  },
+  "include": ["test", "bin", "globals.d.ts", "./types.d.ts"]
+}
